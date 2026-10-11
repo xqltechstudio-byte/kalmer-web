@@ -1,4 +1,6 @@
 node_modules/
 dist/
-# src/images/raw/ SENGAJA tidak diabaikan: itu salinan foto asli dari WordPress lama.
-# Setelah WordPress dimatikan, folder itu satu-satunya sumber untuk membuat ulang WebP.
+dist.tmp/
+dist.old/
+# data live: database + foto upload. Backup folder ini secara rutin, JANGAN di-commit.
+storage/

@@ -97,7 +97,7 @@
   $$('[data-filter]').forEach(function (b) {
     b.onclick = function () {
       $$('[data-filter]').forEach(function (x) { x.setAttribute('aria-selected', x === b); });
-      $$('.masonry img').forEach(function (img) { img.style.display = (b.dataset.filter === 'all' || img.dataset.cat === b.dataset.filter) ? '' : 'none'; });
+      $$('.gallery img').forEach(function (img) { img.style.display = (b.dataset.filter === 'all' || img.dataset.cat === b.dataset.filter) ? '' : 'none'; });
     };
   });
 
@@ -122,7 +122,16 @@
   var lb = $('#lb');
   if (lb) {
     var lbImg = $('img', lb), cnt = $('.cnt', lb), list = [], idx = 0, last;
-    var show = function () { var el = list[idx]; lbImg.src = el.dataset.full || el.currentSrc || el.src; lbImg.alt = el.alt; cnt.textContent = (idx + 1) + ' / ' + list.length; };
+    var go = $('.go', cnt);
+    var show = function () {
+      var el = list[idx];
+      lbImg.src = el.dataset.full || el.currentSrc || el.src; lbImg.alt = el.alt;
+      $('.num', cnt).textContent = (idx + 1) + ' / ' + list.length;
+      $('.cap', cnt).textContent = el.alt;
+      // foto bagian dari studi kasus → tampilkan tautannya
+      go.hidden = !el.dataset.project;
+      if (el.dataset.project) go.href = '/portofolio/' + el.dataset.project + '/';
+    };
     $$('[data-group] img').forEach(function (img) {
       img.tabIndex = 0;
       var open = function () {

@@ -143,3 +143,6 @@
 .kx .skip{position:absolute;left:-9999px;top:0;background:#fff;color:var(--ink);padding:12px 18px;z-index:100}
 .kx .skip:focus{left:12px;top:12px}
 .kx .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* tombol filter/tab di HP: satu baris yang bisa digeser */
+@media (max-width:700px){.kx .tabs{flex-wrap:nowrap;overflow-x:auto;gap:24px;scrollbar-width:none;-webkit-overflow-scrolling:touch}.kx .tabs::-webkit-scrollbar{display:none}.kx .tab{flex:none;white-space:nowrap}}

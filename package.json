@@ -1,16 +1,21 @@
 {
   "name": "kalmer-web",
   "version": "1.0.0",
-  "description": "Situs kalmer.id (statis, tanpa WordPress)",
+  "description": "Situs kalmer.id dengan panel admin (Node.js + SQLite)",
   "scripts": {
-    "images": "node scripts/images.mjs",
-    "build": "node build.mjs",
-    "dev": "node build.mjs && node scripts/serve.mjs",
+    "start": "node --disable-warning=ExperimentalWarning server/server.mjs",
+    "dev": "node --disable-warning=ExperimentalWarning --watch-path=server --watch-path=src server/server.mjs",
+    "build": "node --disable-warning=ExperimentalWarning scripts/build.mjs",
+    "migrate": "node --disable-warning=ExperimentalWarning scripts/migrate.mjs",
+    "user": "node --disable-warning=ExperimentalWarning server/cli.mjs",
     "check": "node scripts/check.mjs"
   },
-  "devDependencies": {
-    "sharp": "^0.35.5"
-  },
   "private": true,
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "sharp": "^0.35.5"
+  }
 }

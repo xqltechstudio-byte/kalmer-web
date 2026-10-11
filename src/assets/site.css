@@ -338,9 +338,13 @@
 @media (max-width:560px){.kx .vids{grid-template-columns:1fr}}
 
 /* GALLERY */
-.kx .masonry{columns:4 240px;column-gap:14px}
-.kx .masonry img{width:100%;margin-bottom:14px;cursor:zoom-in;break-inside:avoid;transition:opacity .4s}
-.kx .masonry img:hover{opacity:.85}
+/* galeri: grid rapi, semua foto seukuran (dipotong otomatis), versi utuh tampil di lightbox */
+.kx .gallery{display:grid;grid-template-columns:repeat(var(--cols,4),1fr);gap:12px}
+.kx .gallery.cols-3{--cols:3}
+.kx .gallery img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 35%;cursor:zoom-in;transition:filter .4s}
+@media (max-width:900px){.kx .gallery{--cols:3;gap:10px}}
+@media (max-width:600px){.kx .gallery,.kx .gallery.cols-3{--cols:2;gap:8px}}
+.kx .gallery img:hover{filter:brightness(.88)}
 
 /* ONGOING — daftar proyek */
 .kx .board{border-top:1px solid var(--edge)}
@@ -417,8 +421,12 @@
 .kx .wa svg{width:28px;height:28px;fill:#fff}
 .kx .lb{position:fixed;inset:0;z-index:100;background:rgba(8,10,12,.96);display:none;align-items:center;justify-content:center}
 .kx .lb.open{display:flex}
-.kx .lb img{max-width:90vw;max-height:84vh}
+.kx .lb img{max-width:90vw;max-height:calc(100vh - 170px);margin-bottom:40px}
 .kx .lb button{position:absolute;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:50%;width:50px;height:50px;font-size:20px;transition:.3s}
 .kx .lb button:hover{background:#fff;color:var(--ink)}
 .kx .lb .c{top:24px;right:24px}.kx .lb .p{left:24px}.kx .lb .n{right:24px}
-.kx .lb .cnt{position:absolute;bottom:24px;color:#c7cdd6;font-size:11px;letter-spacing:.24em}
+.kx .lb .cnt{position:absolute;left:24px;right:24px;bottom:22px;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:6px 18px;color:#c7cdd6;text-align:center}
+.kx .lb .num{font-size:11px;letter-spacing:.24em}
+.kx .lb .cap{font-family:var(--serif);font-size:19px;color:#f3f1ec}
+.kx .lb .go{font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#e9c9a0;border-bottom:1px solid currentColor}
+.kx .lb .go[hidden]{display:none}

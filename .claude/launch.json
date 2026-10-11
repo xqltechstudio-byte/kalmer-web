@@ -4,7 +4,7 @@
     {
       "name": "kalmer",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["scripts/serve.mjs"],
+      "runtimeArgs": ["--disable-warning=ExperimentalWarning", "server/server.mjs"],
       "port": 4321
     }
   ]
