@@ -1,0 +1,16 @@
+{
+  "name": "kalmer-web",
+  "version": "1.0.0",
+  "description": "Situs kalmer.id (statis, tanpa WordPress)",
+  "scripts": {
+    "images": "node scripts/images.mjs",
+    "build": "node build.mjs",
+    "dev": "node build.mjs && node scripts/serve.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  },
+  "private": true,
+  "type": "module"
+}

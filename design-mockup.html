@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalmer — Kontraktor Premium Residential & Commercial</title>
+<meta name="description" content="Kontraktor premium Jabodetabek untuk hunian mewah dan properti komersial. RAB transparan, site engineer berkompeten, finishing tanpa kompromi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Semua style di-scope ke .kx supaya aman ditempel di Elementor/Astra.
+   Palet dari logo Kalmer (hitam #0B0F12, merah #E8232A, biru #1A9BD7),
+   dipakai secara hemat untuk kesan elegan. */
+.kx{
+  --ink:#0b0f12; --ink-2:#12181e; --steel:#161d24; --edge:rgba(255,255,255,.09);
+  --bp:#0c1d29;
+  --red:#d9252b; --red-d:#b81d22; --blue:#1a9bd7; --gold:#c9a96e;
+  --ivory:#f6f4ef; --stone:#ebe7df; --line:#dcd6cb;
+  --muted:#6b6a66; --mut-d:#8f99a3; --ok:#3aa76d;
+  --wrap:1240px;
+  --serif:"Cormorant Garamond",Georgia,serif; --mono:"Manrope",system-ui,sans-serif;
+  font-family:"Manrope",system-ui,sans-serif; font-size:16px; color:var(--ink);
+  background:var(--ink); line-height:1.75; -webkit-font-smoothing:antialiased; font-weight:400;
+}
+.kx *,.kx *::before,.kx *::after{box-sizing:border-box}
+.kx img{max-width:100%;display:block}
+.kx a{color:inherit;text-decoration:none}
+.kx h1,.kx h2,.kx h3,.kx h4,.kx p{margin:0}
+.kx button{font:inherit;cursor:pointer}
+.kx em{font-style:italic}
+.kx .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px;position:relative}
+.kx section{padding:136px 0;scroll-margin-top:84px;position:relative}
+
+/* latar */
+.kx .bg-ink{background:var(--ink);color:#f3f1ec}
+.kx .bg-bp{background:var(--bp);color:#f3f1ec}
+.kx .bg-concrete{background:var(--stone)}
+.kx .bg-paper{background:var(--ivory)}
+.kx .grid-d,.kx .grid-bp{background-image:linear-gradient(rgba(26,155,215,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(26,155,215,.06) 1px,transparent 1px);background-size:120px 120px;background-position:-1px -1px}
+.kx .grid-l{background-image:none}
+.kx .hazard{display:none}
+
+/* tipografi */
+.kx .sec-no{display:inline-flex;align-items:center;gap:14px;font-size:11px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--muted)}
+.kx .sec-no b{font-family:var(--serif);font-style:italic;font-size:18px;font-weight:500;letter-spacing:0;color:var(--red)}
+.kx .sec-no b::after{content:"";display:inline-block;width:36px;height:1px;background:currentColor;vertical-align:middle;margin-left:14px;opacity:.6}
+.kx .bg-bp .sec-no,.kx .bg-ink .sec-no{color:var(--mut-d)}
+.kx .h2{font-family:var(--serif);font-size:clamp(40px,5vw,66px);line-height:1.04;font-weight:500;letter-spacing:-.01em;margin-top:22px}
+.kx .h2 em{color:var(--red);font-weight:500}
+.kx .bg-bp .h2 em,.kx .bg-ink .h2 em{color:#e9c9a0}
+.kx .lead{color:var(--muted);font-size:17px;max-width:520px;margin-top:22px;font-weight:300;line-height:1.8}
+.kx .bg-ink .lead,.kx .bg-bp .lead{color:var(--mut-d)}
+.kx .head{margin-bottom:72px}
+.kx .head.split{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:end}
+.kx .head.split .lead{margin:0;justify-self:end}
+@media (max-width:900px){.kx section{padding:96px 0}.kx .head{margin-bottom:52px}.kx .head.split{grid-template-columns:1fr;gap:0}.kx .head.split .lead{margin-top:20px;justify-self:start}}
+
+/* tombol */
+.kx .btn{display:inline-flex;align-items:center;gap:12px;padding:17px 30px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;border:0;transition:background .3s,color .3s,box-shadow .3s}
+.kx .btn svg{width:16px;height:16px}
+.kx .btn-primary{background:var(--red);color:#fff}
+.kx .btn-primary:hover{background:var(--red-d)}
+.kx .btn-ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1px currentColor}
+.kx .btn-ghost:hover{background:#f3f1ec;color:var(--ink);box-shadow:inset 0 0 0 1px #f3f1ec}
+.kx .bg-paper .btn-ghost:hover{background:var(--ink);color:#fff}
+
+/* chip: label garis tipis */
+.kx .chip{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;padding:6px 12px;border:1px solid currentColor;color:#e9c9a0}
+.kx .chip.b{color:#8ccbea}
+.kx .chip.g{color:#86d1a8}
+.kx .chip.k{color:#f3f1ec}
+
+/* bingkai garis tipis menggantikan crop mark */
+.kx .marks{position:relative}
+.kx .marks::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid rgba(201,169,110,.45);pointer-events:none;z-index:0}
+.kx .marks > *{position:relative;z-index:1}
+.kx .marks::after{display:none}
+
+.kx .reveal{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.kx .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.kx .reveal{opacity:1;transform:none;transition:none}}
+
+/* TOP BAR */
+.kx .topbar{background:var(--ink);color:var(--mut-d);font-size:11px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--edge)}
+.kx .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;gap:20px}
+.kx .topbar span{display:inline-flex;align-items:center;gap:8px}
+.kx .topbar .l{display:flex;gap:32px}
+.kx .topbar b{color:var(--red);font-weight:400}
+.kx .topbar a:hover{color:#fff}
+@media (max-width:760px){.kx .topbar .hide-m{display:none}}
+
+/* NAV */
+.kx .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.kx .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.kx .logo{display:flex;align-items:center;gap:16px}
+/* PNG logo punya padding transparan besar: crop ke area logo saja. --L = tinggi logo yang terlihat */
+.kx .logo .crop{--L:58px;display:block;overflow:hidden;height:var(--L);width:calc(var(--L)*.84)}
+.kx .logo .crop img{height:calc(var(--L)*1.855);width:auto;max-width:none;margin:calc(var(--L)*-.4225) 0 0 calc(var(--L)*-.5335)}
+.kx .logo .lt{font-size:10px;line-height:1.6;letter-spacing:.26em;color:var(--muted);border-left:1px solid var(--line);padding-left:16px;text-transform:uppercase}
+.kx .logo .lt b{display:block;font-family:var(--serif);font-size:19px;letter-spacing:.02em;text-transform:none;font-weight:600;color:var(--ink)}
+.kx .nav-links{display:flex;gap:40px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#3c3f43}
+.kx .nav-links a{position:relative;padding:6px 0;transition:color .3s}
+.kx .nav-links a::after{content:"";position:absolute;left:50%;right:50%;bottom:0;height:1px;background:var(--red);transition:left .3s,right .3s}
+.kx .nav-links a:hover{color:var(--ink)}
+.kx .nav-links a:hover::after{left:0;right:0}
+.kx .nav .btn{padding:14px 22px;font-size:11px}
+.kx .burger{display:none;background:none;border:0;padding:8px}
+.kx .burger span{display:block;width:24px;height:1.5px;background:var(--ink);margin:6px 0}
+@media (max-width:1060px){.kx .logo .lt{display:none}.kx .nav-links{gap:28px}}
+@media (max-width:900px){
+  .kx .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);display:none}
+  .kx .nav-links a{padding:18px 24px;border-top:1px solid var(--line)}
+  .kx .nav-links a::after{display:none}
+  .kx .nav.open .nav-links{display:flex}
+  .kx .burger{display:block}
+  .kx .nav .btn{display:none}
+  .kx .nav .wrap{height:72px}.kx .nav .logo .crop{--L:48px}
+}
+
+/* HERO — full screen, slider sebagai latar */
+.kx .hero{padding:0;overflow:hidden;color:#fff;background:var(--ink);min-height:calc(100vh - 126px);min-height:calc(100svh - 126px);display:flex;flex-direction:column;touch-action:pan-y}
+.kx .hs-slides{position:absolute;inset:0;z-index:0}
+.kx .hs-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease}
+.kx .hs-slide.active{opacity:1;z-index:1}
+.kx .hs-slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.1);transition:transform 8s ease-out}
+.kx .hs-slide.active img{transform:scale(1)}
+.kx .hero-shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:
+  linear-gradient(90deg,rgba(11,15,18,.88) 0,rgba(11,15,18,.62) 38%,rgba(11,15,18,.15) 72%,rgba(11,15,18,.25) 100%),
+  linear-gradient(180deg,rgba(11,15,18,.35) 0,transparent 25%,transparent 60%,rgba(11,15,18,.9) 100%)}
+.kx .hero-main{position:relative;z-index:2;flex:1;display:flex;align-items:center;padding:72px 0 56px}
+.kx .hero-main{pointer-events:none}
+.kx .hero-text{max-width:820px;pointer-events:auto}
+.kx .tag{display:inline-flex;align-items:center;gap:14px;font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#d8dcdf}
+.kx .tag b{color:#e9c9a0;font-weight:600}
+.kx .tag b::after{content:"";display:inline-block;width:28px;height:1px;background:currentColor;vertical-align:middle;margin-left:14px;opacity:.6}
+.kx .hero h1{font-family:var(--serif);font-size:clamp(48px,6vw,92px);line-height:1;font-weight:500;letter-spacing:-.015em;margin:26px 0 26px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.kx .hero h1 em{display:block;color:#e9c9a0;font-weight:500}
+.kx .hero h1 .o{color:inherit}
+.kx .hero p.sub{font-size:17.5px;color:#d3d8dc;max-width:500px;font-weight:300;line-height:1.85}
+.kx .hero-cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:38px}
+.kx .hero .btn-ghost{color:#fff}
+/* data caption per slide; ditampilkan lewat .hs-now di strip bawah */
+.kx .hs-cap{display:none}
+/* strip bawah: statistik + kontrol slider */
+.kx .hero-bar{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.16);background:rgba(11,15,18,.35);backdrop-filter:blur(6px)}
+.kx .hero-bar .wrap{display:grid;grid-template-columns:1fr auto;align-items:stretch}
+.kx .stats{display:grid;grid-template-columns:repeat(4,1fr)}
+.kx .stat{padding:30px 28px 32px 0}
+.kx .stat + .stat{padding-left:28px;border-left:1px solid rgba(255,255,255,.12)}
+.kx .stat .n{font-family:var(--serif);font-size:46px;line-height:1;font-weight:500}
+.kx .stat .n span{color:#e9c9a0;font-size:.6em;margin-left:2px}
+.kx .stat .l{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#b9c0c6;margin-top:10px}
+.kx .hs-ctrl{display:flex;align-items:center;gap:22px;padding-left:40px;border-left:1px solid rgba(255,255,255,.12)}
+.kx .hs-count{font-size:11px;letter-spacing:.24em;color:rgba(255,255,255,.7);white-space:nowrap}
+.kx .hs-count b{font-family:var(--serif);font-style:italic;font-size:26px;font-weight:500;letter-spacing:0;color:#fff;margin-right:4px}
+.kx .hs-ctrl .arrows{display:flex;gap:10px}
+.kx .hs-ctrl .arrows button{width:46px;height:46px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:transparent;color:#fff;font-size:18px;line-height:1;transition:.3s}
+.kx .hs-ctrl .arrows button:hover{background:#fff;color:var(--ink)}
+.kx .hs-dots{display:none}
+.kx .hs-now{display:flex;flex-direction:column;min-width:0;width:240px;transition:opacity .4s}
+.kx .hs-now.fade{opacity:0}
+.kx .hs-now .t{font-family:var(--serif);font-size:19px;line-height:1.25;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kx .hs-now .l{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#e9c9a0;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kx .hs-now:hover .t{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.kx .hs-progress{position:absolute;left:0;right:0;top:-1px;height:2px;background:transparent}
+.kx .hs-progress i{display:block;height:100%;width:0;background:var(--red)}
+.kx .hs-progress i.run{width:100%;transition:width linear var(--dur,6s)}
+@media (max-width:1200px){.kx .stat{padding-right:20px}.kx .stat + .stat{padding-left:20px}.kx .stat .n{font-size:38px}.kx .stat .l{letter-spacing:.14em}.kx .hs-ctrl{padding-left:28px;gap:16px}.kx .hs-now{width:180px}}
+/* layar laptop pendek (mis. 1366x768) */
+@media (min-width:901px) and (max-height:860px){
+  .kx .hero-main{padding:44px 0 36px}
+  .kx .hero h1{font-size:clamp(48px,5.4vw,76px);margin:20px 0}
+  .kx .hero p.sub{font-size:16px}
+  .kx .hero-cta{margin-top:28px}
+  .kx .stat{padding-top:20px;padding-bottom:22px}
+  .kx .stat .n{font-size:38px}
+}
+@media (max-width:900px){
+  .kx .hero{min-height:calc(100svh - 114px)}
+  .kx .hero-shade{background:linear-gradient(180deg,rgba(11,15,18,.5) 0,rgba(11,15,18,.55) 40%,rgba(11,15,18,.92) 100%)}
+  .kx .hero-main{padding:40px 0 28px;align-items:flex-end}
+  .kx .hero h1{font-size:44px;margin:18px 0}
+  .kx .hero p.sub{font-size:15px;line-height:1.7}
+  .kx .hero-cta{margin-top:26px;gap:10px}
+  .kx .hero-cta .btn{padding:15px 20px;font-size:11px;letter-spacing:.16em}
+  .kx .hero-bar .wrap{grid-template-columns:1fr}
+  .kx .stats{grid-template-columns:repeat(4,1fr);order:2}
+  .kx .stat,.kx .stat + .stat{padding:14px 6px 16px}
+  .kx .stat:first-child{padding-left:0}
+  .kx .stat .n{font-size:28px}
+  .kx .stat .l{font-size:8.5px;letter-spacing:.1em;margin-top:6px;line-height:1.4}
+  .kx .hs-ctrl{order:1;padding:12px 0;gap:14px;border-left:0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .kx .hs-now{width:auto;flex:1}
+  .kx .hs-now .t{font-size:17px}
+  .kx .hs-ctrl .arrows button{width:38px;height:38px}
+}
+/* CLIENTS */
+.kx .clients{background:var(--ivory);padding:56px 0;border-bottom:1px solid var(--line)}
+.kx .clients .wrap{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:center}
+.kx .clients p{font-size:10.5px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);line-height:1.8}
+.kx .clients p b{display:block;font-family:var(--serif);font-size:24px;letter-spacing:0;text-transform:none;font-weight:500;font-style:italic;color:var(--ink)}
+.kx .marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.kx .track{display:flex;gap:80px;width:max-content;animation:kx-scroll 50s linear infinite;align-items:center}
+.kx .track img{height:46px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.55;mix-blend-mode:multiply;transition:.4s}
+.kx .track img:hover{filter:none;opacity:1}
+.kx .track img.big{height:62px}
+.kx .marquee:hover .track{animation-play-state:paused}
+@keyframes kx-scroll{to{transform:translateX(-50%)}}
+@media (max-width:760px){.kx .clients .wrap{grid-template-columns:1fr;gap:24px}}
+
+/* FOUNDER */
+.kx .founder{display:grid;grid-template-columns:.9fr 1.1fr;gap:110px;align-items:center}
+.kx .founder-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--stone)}
+.kx .founder-photo .badge{position:absolute;left:-1px;bottom:-1px;z-index:2;background:var(--ivory);padding:22px 28px 0 0}
+.kx .founder-photo .badge strong{display:block;font-family:var(--serif);font-size:28px;font-weight:600;line-height:1.1}
+.kx .founder-photo .badge span{font-size:10px;letter-spacing:.26em;color:var(--muted)}
+.kx .founder blockquote{margin:32px 0 0;font-family:var(--serif);font-size:27px;line-height:1.4;font-weight:500;font-style:italic;color:#1f2328}
+.kx .founder blockquote b{color:var(--red);font-weight:600}
+.kx .founder .body{color:var(--muted);margin-top:24px;font-weight:300}
+.kx .pull{margin-top:36px;padding:4px 0 4px 28px;border-left:1px solid var(--red);font-size:15px;font-weight:500;color:#3a3d41}
+.kx .pull::before{display:none}
+@media (max-width:900px){.kx .founder{grid-template-columns:1fr;gap:64px}.kx .founder-photo img{aspect-ratio:1/1}.kx .founder blockquote{font-size:23px}}
+
+/* PROBLEM vs SOLUTION */
+.kx .risks{display:grid;grid-template-columns:repeat(3,1fr);gap:56px;margin-bottom:88px}
+.kx .risk{padding-top:28px;border-top:1px solid var(--edge)}
+.kx .risk .no{font-family:var(--serif);font-style:italic;font-size:20px;color:#e9c9a0}
+.kx .risk h3{font-family:var(--serif);font-size:30px;font-weight:500;margin:8px 0 12px}
+.kx .risk p{font-size:15px;color:var(--mut-d);font-weight:300}
+.kx .compare{border-top:1px solid var(--edge)}
+.kx .crow{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--edge)}
+.kx .crow > div{padding:30px 40px 30px 0;display:flex;gap:20px}
+.kx .crow > div:last-child{padding-left:40px;border-left:1px solid var(--edge)}
+.kx .crow > div:first-child{opacity:.6}
+.kx .crow.hd > div{padding:22px 40px 22px 0;font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;opacity:1}
+.kx .crow.hd > div:last-child{padding-left:40px;color:#e9c9a0}
+.kx .crow.hd > div:first-child{color:var(--mut-d)}
+.kx .crow h4{margin:0 0 6px;font-family:var(--serif);font-size:23px;font-weight:500}
+.kx .crow p{font-size:14.5px;color:var(--mut-d);font-weight:300}
+.kx .x,.kx .v{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:12px;margin-top:2px}
+.kx .x{border:1px solid rgba(255,255,255,.25);color:var(--mut-d)}
+.kx .v{border:1px solid #e9c9a0;color:#e9c9a0}
+@media (max-width:800px){
+  .kx .risks{grid-template-columns:1fr;gap:36px;margin-bottom:64px}
+  .kx .crow{grid-template-columns:1fr}
+  .kx .crow > div,.kx .crow > div:last-child{padding:22px 0;border-left:0}
+  .kx .crow > div:first-child{border-bottom:1px dashed var(--edge)}
+  .kx .crow.hd{display:none}
+}
+
+/* SERVICES */
+.kx .svc-media{display:grid;grid-template-columns:1.6fr 1fr;gap:24px;margin-bottom:96px}
+.kx .svc-media img{width:100%;height:420px;object-fit:cover}
+.kx .svc-media .exp{border:1px solid var(--edge);padding:44px;display:flex;flex-direction:column;justify-content:space-between;min-height:420px}
+.kx .svc-media .exp::before{display:none}
+.kx .svc-media .exp .k{font-size:10.5px;letter-spacing:.3em;font-weight:600;color:var(--mut-d)}
+.kx .svc-media .exp .n{font-family:var(--serif);font-size:170px;font-weight:500;line-height:.85;color:#e9c9a0}
+.kx .svc-media .exp p{font-family:var(--serif);font-size:24px;line-height:1.35;font-style:italic}
+.kx .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 64px}
+.kx .svc{padding:40px 0 48px;border-top:1px solid var(--edge);position:relative}
+.kx .svc::before{content:"";position:absolute;top:-1px;left:0;width:0;height:1px;background:var(--red);transition:width .6s ease}
+.kx .svc:hover::before{width:100%}
+.kx .svc .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+.kx .svc .ic{color:#e9c9a0}
+.kx .svc .ic svg{width:28px;height:28px;stroke-width:1.2}
+.kx .svc .no{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--mut-d)}
+.kx .svc h3{font-family:var(--serif);font-size:30px;font-weight:500;margin-bottom:12px;line-height:1.1}
+.kx .svc p{font-size:15px;color:var(--mut-d);font-weight:300}
+@media (max-width:900px){.kx .svc-grid{grid-template-columns:1fr}.kx .svc-media{grid-template-columns:1fr;margin-bottom:64px}.kx .svc-media img{height:260px}.kx .svc-media .exp{min-height:0;gap:24px;padding:32px}.kx .svc-media .exp .n{font-size:120px}}
+
+/* PROCESS */
+.kx .steps{display:grid;grid-template-columns:repeat(6,1fr);gap:32px;border-top:1px solid var(--line)}
+.kx .step{padding:36px 0 8px;position:relative}
+.kx .step::before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;background:var(--ivory);border:1px solid var(--ink);transform:rotate(45deg)}
+.kx .step:last-child::before{background:var(--red);border-color:var(--red)}
+.kx .step .num{font-family:var(--serif);font-size:56px;font-weight:400;font-style:italic;line-height:1;color:#b9b2a5;margin-bottom:20px;-webkit-text-stroke:0}
+.kx .step:last-child .num{color:var(--red)}
+.kx .step h3{font-family:var(--serif);font-size:25px;font-weight:600;line-height:1.15;margin-bottom:10px}
+.kx .step p{font-size:14px;color:var(--muted);font-weight:300}
+@media (max-width:900px){
+  .kx .steps{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--line);padding-left:32px;gap:12px}
+  .kx .step{padding:0 0 24px}
+  .kx .step::before{top:18px;left:-36px}
+  .kx .step .num{font-size:44px;margin-bottom:8px}
+}
+
+/* PORTFOLIO */
+.kx .tabs{display:flex;flex-wrap:wrap;gap:40px;margin-bottom:48px;border-bottom:1px solid var(--edge);width:100%}
+.kx .tab{border:0;background:transparent;padding:0 0 18px;margin-bottom:-1px;font-family:var(--serif);font-size:24px;font-weight:500;color:var(--mut-d);border-bottom:1px solid transparent;transition:.3s}
+.kx .tab:hover{color:#f3f1ec}
+.kx .tab[aria-selected="true"]{color:#f3f1ec;border-bottom-color:var(--red)}
+.kx .bg-paper .tabs{border-color:var(--line)}
+.kx .bg-paper .tab{color:#9b968c;font-size:13px;font-family:var(--mono);font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding-bottom:14px}
+.kx .bg-paper .tab:hover,.kx .bg-paper .tab[aria-selected="true"]{color:var(--ink)}
+.kx .panel[hidden]{display:none}
+.kx .proj{display:grid;grid-template-columns:1fr 2.1fr;gap:56px;align-items:start}
+.kx .proj-info{padding:8px 0 0;position:sticky;top:120px}
+.kx .proj-info h3{font-family:var(--serif);font-size:42px;line-height:1.05;font-weight:500;margin:22px 0 12px}
+.kx .proj-info .loc{font-size:11px;letter-spacing:.22em;color:var(--mut-d);text-transform:uppercase}
+.kx .spec{margin:36px 0 0;border-top:1px solid var(--edge);font-size:14.5px}
+.kx .spec div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--edge)}
+.kx .spec dt{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut-d);padding-top:3px}
+.kx .spec dd{margin:0;font-weight:500;text-align:right}
+.kx .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.kx .gal img{width:100%;height:230px;object-fit:cover;cursor:zoom-in;transition:opacity .4s}
+.kx .gal img:hover{opacity:.85}
+.kx .gal img.wide{grid-column:span 2;grid-row:span 2;height:474px}
+.kx .gal.two{grid-template-columns:1fr 1fr}
+.kx .gal.two img{height:480px}
+@media (max-width:900px){
+  .kx .proj{grid-template-columns:1fr;gap:36px}.kx .proj-info{position:static}
+  .kx .gal{grid-template-columns:1fr 1fr;gap:10px}.kx .gal img{height:160px}
+  .kx .gal img.wide{grid-column:span 2;height:240px;grid-row:auto}
+  .kx .gal.two img{height:220px}
+  .kx .tabs{gap:24px}.kx .tab{font-size:20px}
+}
+.kx .ba{position:relative;overflow:hidden;aspect-ratio:16/10;user-select:none;background:var(--steel)}
+.kx .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.kx .ba .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.kx .ba .bar{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:1px;background:#fff;transform:translateX(-50%);pointer-events:none}
+.kx .ba .bar::after{content:"‹ ›";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;border:1px solid #fff;background:rgba(11,15,18,.35);backdrop-filter:blur(4px);color:#fff;display:grid;place-items:center;font-size:16px;letter-spacing:4px}
+.kx .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.kx .ba .lbl{position:absolute;top:20px;font-size:10.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:#fff;pointer-events:none;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.kx .ba .lbl.l{left:22px}.kx .ba .lbl.r{right:22px}
+.kx .ba-hint{font-size:10.5px;letter-spacing:.24em;color:var(--mut-d);margin-top:16px;text-align:center;text-transform:uppercase}
+
+/* VIDEO */
+.kx .vids{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.kx .vid{overflow:hidden;background:#000;position:relative;aspect-ratio:16/9;cursor:pointer}
+.kx .vid.short{aspect-ratio:9/16}
+.kx .vid img{width:100%;height:100%;object-fit:cover;opacity:.75;transition:opacity .5s,transform 1s}
+.kx .vid:hover img{opacity:.95;transform:scale(1.04)}
+.kx .vid .play{position:absolute;inset:0;display:grid;place-items:center}
+.kx .vid .play span{width:58px;height:58px;border-radius:50%;border:1px solid rgba(255,255,255,.8);background:rgba(11,15,18,.3);backdrop-filter:blur(4px);display:grid;place-items:center;transition:.3s}
+.kx .vid:hover .play span{background:var(--red);border-color:var(--red)}
+.kx .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.kx .vid-cap{margin-top:18px}
+.kx .vid-cap .stars{color:#e9c9a0;letter-spacing:3px;font-size:11px}
+.kx .vid-cap h4{margin:4px 0;font-family:var(--serif);font-size:24px;font-weight:500}
+.kx .vid-cap p{font-size:14px;color:var(--mut-d);font-weight:300}
+.kx .shorts{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+@media (max-width:900px){
+  .kx .vids{grid-template-columns:1fr 1fr}
+  .kx .shorts{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+  .kx .shorts .vid{flex:0 0 58%;scroll-snap-align:start}
+}
+@media (max-width:560px){.kx .vids{grid-template-columns:1fr}}
+
+/* GALLERY */
+.kx .masonry{columns:4 240px;column-gap:14px}
+.kx .masonry img{width:100%;margin-bottom:14px;cursor:zoom-in;break-inside:avoid;transition:opacity .4s}
+.kx .masonry img:hover{opacity:.85}
+
+/* ONGOING — daftar proyek */
+.kx .board{border-top:1px solid var(--edge)}
+.kx .brow{display:grid;grid-template-columns:80px 1.5fr 1.3fr 160px 170px;align-items:center;border-bottom:1px solid var(--edge);transition:background .3s}
+.kx .brow:hover{background:rgba(255,255,255,.025)}
+.kx .brow > *{padding:24px 16px}
+.kx .brow > :first-child{padding-left:0}
+.kx .brow.hd{font-size:10.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--mut-d)}
+.kx .brow.hd:hover{background:none}
+.kx .brow.hd > *{padding-top:18px;padding-bottom:18px}
+.kx .brow .no{font-family:var(--serif);font-style:italic;font-size:20px;color:#e9c9a0}
+.kx .brow h4{font-family:var(--serif);font-size:26px;font-weight:500}
+.kx .brow .d{color:var(--mut-d);font-size:14.5px;font-weight:300}
+.kx .status{display:inline-flex;align-items:center;gap:10px;font-size:10.5px;font-weight:600;letter-spacing:.2em;color:#86d1a8}
+.kx .pulse{flex:none;width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(58,167,109,.6);animation:kx-pulse 2.4s infinite}
+@keyframes kx-pulse{70%{box-shadow:0 0 0 9px rgba(58,167,109,0)}100%{box-shadow:0 0 0 0 rgba(58,167,109,0)}}
+@media (max-width:900px){
+  .kx .brow{grid-template-columns:48px 1fr;row-gap:0}
+  .kx .brow.hd{display:none}
+  .kx .brow > *{padding:3px 0}
+  .kx .brow .no{grid-row:span 4;align-self:start;padding-top:24px}
+  .kx .brow h4{padding-top:22px;font-size:24px}
+  .kx .brow > :nth-child(4){padding:10px 0 6px}
+  .kx .brow > :last-child{padding-bottom:24px}
+}
+
+/* CTA */
+.kx .cta-sec{color:#fff;padding:0;overflow:hidden;background:var(--ink) url("https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-10.42.37-AM.jpeg") center/cover no-repeat}
+.kx .cta-sec::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,15,18,.94) 0,rgba(11,15,18,.82) 50%,rgba(11,15,18,.6))}
+.kx .cta{display:grid;grid-template-columns:1.2fr 1fr;gap:88px;align-items:center;padding:150px 0;position:relative}
+.kx .cta h2{font-family:var(--serif);font-size:clamp(44px,5.6vw,76px);line-height:1;font-weight:500}
+.kx .cta h2 em{color:#e9c9a0}
+.kx .cta .note{margin-top:26px;max-width:460px;font-size:16px;color:#c3c8cd;font-weight:300}
+.kx .cta .sec-no{color:#c3c8cd}
+.kx .cta-box{background:rgba(246,244,239,.97);color:var(--ink);padding:48px 44px}
+.kx .cta-box.marks::before{border-color:rgba(233,201,160,.5)}
+.kx .cta-box h3{font-family:var(--serif);font-size:34px;font-weight:500;line-height:1.1}
+.kx .cta-box > p{font-size:14.5px;color:var(--muted);margin:10px 0 30px;font-weight:300}
+.kx .cta-box .btn{width:100%;justify-content:center;background:var(--ink);color:#fff}
+.kx .cta-box .btn:hover{background:var(--red)}
+.kx .bonus{margin-top:32px;padding-top:26px;border-top:1px solid var(--line)}
+.kx .bonus b{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--red);font-weight:700}
+.kx .bonus ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:12px;font-family:var(--serif);font-size:20px;font-weight:500}
+.kx .bonus li::before{content:"";display:inline-block;width:5px;height:5px;background:var(--red);transform:rotate(45deg);margin-right:14px;vertical-align:middle}
+@media (max-width:900px){.kx .cta{grid-template-columns:1fr;padding:100px 0;gap:56px}.kx .cta-box{padding:36px 26px}}
+
+/* FAQ */
+.kx .faq{display:grid;grid-template-columns:.85fr 1.15fr;gap:96px}
+.kx .faq-list{border-top:1px solid var(--line)}
+.kx .faq details{border-bottom:1px solid var(--line)}
+.kx .faq summary{list-style:none;cursor:pointer;padding:28px 0;font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.3;display:grid;grid-template-columns:52px 1fr 24px;gap:12px;align-items:start}
+.kx .faq summary::-webkit-details-marker{display:none}
+.kx .faq summary i{font-style:italic;font-size:17px;color:var(--red);padding-top:4px}
+.kx .faq summary::after{content:"+";font-family:var(--mono);font-weight:300;font-size:24px;line-height:1.2;color:var(--muted);transition:transform .3s}
+.kx .faq details[open] summary::after{transform:rotate(45deg);color:var(--red)}
+.kx .faq details p{padding:0 40px 30px 64px;color:var(--muted);font-weight:300}
+@media (max-width:900px){.kx .faq{grid-template-columns:1fr;gap:40px}.kx .faq summary{font-size:21px;grid-template-columns:40px 1fr 20px}.kx .faq details p{padding:0 0 26px 52px}}
+
+/* FOOTER */
+.kx footer{color:var(--mut-d);padding:110px 0 32px;font-size:14.5px;font-weight:300;border-top:1px solid var(--edge)}
+.kx .foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:72px}
+.kx footer h5{font-size:10.5px;font-weight:700;color:#e9c9a0;letter-spacing:.28em;text-transform:uppercase;margin:0 0 24px}
+.kx footer ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.kx footer a{transition:color .3s}
+.kx footer a:hover{color:#fff}
+.kx footer .logo-box{display:inline-block;background:#fff;padding:14px 18px}
+.kx footer .logo .crop{--L:52px}
+.kx .copy{margin-top:88px;padding-top:28px;border-top:1px solid var(--edge);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (max-width:900px){.kx .foot{grid-template-columns:1fr;gap:48px}}
+
+/* WA float + lightbox */
+.kx .wa{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.5);transition:transform .3s}
+.kx .wa:hover{transform:translateY(-3px)}
+.kx .wa svg{width:28px;height:28px;fill:#fff}
+.kx .lb{position:fixed;inset:0;z-index:100;background:rgba(8,10,12,.96);display:none;align-items:center;justify-content:center}
+.kx .lb.open{display:flex}
+.kx .lb img{max-width:90vw;max-height:84vh}
+.kx .lb button{position:absolute;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:50%;width:50px;height:50px;font-size:20px;transition:.3s}
+.kx .lb button:hover{background:#fff;color:var(--ink)}
+.kx .lb .c{top:24px;right:24px}.kx .lb .p{left:24px}.kx .lb .n{right:24px}
+.kx .lb .cnt{position:absolute;bottom:24px;color:#c7cdd6;font-size:11px;letter-spacing:.24em}
+</style>
+</head>
+<body style="margin:0">
+<div class="kx">
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="l">
+      <span><b>■</b> Melayani Jabodetabek</span>
+      <span class="hide-m">Jl. Salak 1 No.66, Bekasi Utara</span>
+    </div>
+    <div class="l">
+      <a class="hide-m" href="mailto:admin@kalmer.id">admin@kalmer.id</a>
+      <a href="https://wa.me/6281250505181" target="_blank" rel="noopener"><b>☎</b> 0812-5050-5181</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo">
+      <span class="crop"><img src="https://kalmer.id/wp-content/uploads/2025/09/Logo-Sosmed-01-1.png" alt="Kalmer"></span>
+      <span class="lt"><b>Kalmer Multi Teknik</b>General Contractor</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#layanan">Layanan</a>
+      <a href="#proses">Proses</a>
+      <a href="#portofolio">Portofolio</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/6281250505181?text=Halo%20Kalmer,%20saya%20tertarik%20untuk%20diskusi%20mengenai%20pembangunan%20aset%20properti%20saya." target="_blank" rel="noopener">Konsultasi Gratis</a>
+    <button class="burger" id="burger" aria-label="Buka menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top" aria-roledescription="carousel" aria-label="Portofolio Kalmer">
+  <div class="hs-slides">
+    <div class="hs-slide active" data-goto="p2">
+      <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-10.42.37-AM-1.jpeg" alt="Modern Workspace & Public Area, Untar">
+      <div class="hs-cap"><span class="chip b">Educational Facility</span><strong>Modern Workspace &amp; Public Area</strong><span class="loc">Untar · Jakarta Barat</span></div>
+    </div>
+    <div class="hs-slide" data-goto="p1">
+      <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-9.27.43-AM-1.jpeg" alt="Facade & Interior Premium, Tebet" loading="lazy">
+      <div class="hs-cap"><span class="chip">Luxury Commercial</span><strong>Facade &amp; Interior Premium</strong><span class="loc">Tebet Timur · Jakarta Selatan</span></div>
+    </div>
+    <div class="hs-slide" data-goto="p1">
+      <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-9.31.59-AM.jpeg" alt="Detail interior premium, Tebet" loading="lazy">
+      <div class="hs-cap"><span class="chip">Luxury Commercial</span><strong>Detail Interior &amp; Custom Furniture</strong><span class="loc">Tebet Timur · Jakarta Selatan</span></div>
+    </div>
+    <div class="hs-slide" data-goto="p3">
+      <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-11.32.43-AM.jpeg" alt="Restorasi Bangunan Komersial, Setu" loading="lazy">
+      <div class="hs-cap"><span class="chip">Commercial Revamp</span><strong>Restorasi Bangunan Komersial</strong><span class="loc">Setu · Bekasi</span></div>
+    </div>
+    <div class="hs-slide" data-goto="p4">
+      <img src="https://kalmer.id/wp-content/uploads/2026/01/Gemini_Generated_Image_xynmq0xynmq0xynm.png" alt="Modern Architecture Design, Depok" loading="lazy">
+      <div class="hs-cap"><span class="chip k">In Development</span><strong>Modern Architecture Design</strong><span class="loc">Depok · Jawa Barat</span></div>
+    </div>
+  </div>
+  <div class="hero-shade"></div>
+
+  <div class="hero-main">
+    <div class="wrap">
+      <div class="hero-text reveal">
+        <span class="tag"><b>Premium Builder</b><span>Residential &amp; Commercial</span></span>
+        <h1>Wujudkan hunian <em>warisan masa depan.</em></h1>
+        <p class="sub">Bukan sekadar bangunan, tapi aset bernilai tinggi. Kami merealisasikan desain arsitektural Anda dengan presisi struktur, material kelas satu, dan <em>finishing</em> tanpa kompromi.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://wa.me/6281250505181?text=Halo%20Kalmer,%20saya%20tertarik%20untuk%20diskusi%20mengenai%20pembangunan%20aset%20properti%20saya." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>
+            Diskusikan Rencana Anda</a>
+          <a class="btn btn-ghost" href="#portofolio">Lihat Portofolio →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-bar">
+    <div class="hs-progress"><i></i></div>
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat"><div class="n">8<span>+</span></div><div class="l">Tahun pengalaman</div></div>
+        <div class="stat"><div class="n">9</div><div class="l">Proyek aktif</div></div>
+        <div class="stat"><div class="n">100<span>%</span></div><div class="l">RAB transparan</div></div>
+        <div class="stat"><div class="n">3<span>bln</span></div><div class="l">Retensi + garansi</div></div>
+      </div>
+      <div class="hs-ctrl">
+        <div class="hs-count"><b class="cur">01</b>/ <span class="tot">05</span></div>
+        <a class="hs-now" href="#portofolio"><span class="t"></span><span class="l"></span></a>
+        <div class="hs-dots"></div>
+        <div class="arrows">
+          <button class="hs-prev" aria-label="Slide sebelumnya">‹</button>
+          <button class="hs-next" aria-label="Slide berikutnya">›</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<div class="clients">
+  <div class="wrap">
+    <p><b>Dipercaya oleh</b>Korporasi nasional &amp; private owner</p>
+    <div class="marquee">
+      <div class="track" id="track">
+        <img class="big" src="https://kalmer.id/wp-content/uploads/2026/01/logokapalapiglobal.png" alt="Kapal Api Global">
+        <img src="https://kalmer.id/wp-content/uploads/2026/01/imageukuuku.png" alt="Logo klien">
+        <img src="https://kalmer.id/wp-content/uploads/2026/01/grrsef.png" alt="Logo klien">
+        <img src="https://kalmer.id/wp-content/uploads/2026/01/dwadwa.png" alt="Logo klien">
+        <img src="https://kalmer.id/wp-content/uploads/2026/01/imagedsfvz.png" alt="Logo klien">
+        <img src="https://kalmer.id/wp-content/uploads/2026/01/imagesdawadwsda.png" alt="Logo klien">
+        <img src="https://kalmer.id/wp-content/uploads/2026/01/imagedwdwdad.png" alt="Logo klien">
+        <img src="https://kalmer.id/wp-content/uploads/2026/01/imagedwadwd.png" alt="Logo klien">
+        <img src="https://kalmer.id/wp-content/uploads/2026/01/imagefe.png" alt="Logo klien">
+        <img src="https://kalmer.id/wp-content/uploads/2026/01/imagefes-scaled.png" alt="Logo klien">
+        <img src="https://kalmer.id/wp-content/uploads/2026/01/image.png" alt="Logo klien">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOUNDER -->
+<section class="bg-paper grid-l">
+  <div class="wrap founder">
+    <div class="founder-photo marks reveal">
+      <img src="https://kalmer.id/wp-content/uploads/2026/01/Gemini_Generated_Image_d5c8sbd5c8sbd5c8-1.png" alt="Rahadian Fatrah, Founder & CEO Kalmer" loading="lazy">
+      <div class="badge"><strong>Rahadian Fatrah</strong><span>FOUNDER &amp; CEO KALMER.ID</span></div>
+    </div>
+    <div class="reveal">
+      <span class="sec-no"><b>01</b>Founder's Commitment</span>
+      <h2 class="h2">Investasi signifikan, butuh <em>mitra terpercaya.</em></h2>
+      <blockquote>“Dalam <b>10 tahun</b> di industri konstruksi, saya memahami bahwa membangun rumah impian atau properti komersial bukan pengeluaran biasa, melainkan <b>keputusan investasi besar</b>.”</blockquote>
+      <p class="body">Klien kami, dari pemilik bisnis hingga eksekutif, tidak mencari “yang termurah”. Mereka mencari ketenangan pikiran: kepastian bahwa spesifikasi di kontrak adalah apa yang terpasang di lapangan, tanpa <em>downgrade</em> diam-diam.</p>
+      <div class="pull">Standar manajemen proyek korporasi yang kami terapkan untuk klien seperti Kapal Api Group, kini kami bawa untuk hunian pribadi Anda.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM vs SOLUTION -->
+<section class="bg-bp grid-bp" id="masalah">
+  <div class="wrap">
+    <div class="head split reveal">
+      <div>
+        <span class="sec-no"><b>02</b>Risiko terbesar konstruksi</span>
+        <h2 class="h2">Mengapa proyek gagal di tangan <em>pemborong biasa?</em></h2>
+      </div>
+      <p class="lead">Bukan sekadar uang yang hilang. Waktu berharga dan kualitas hidup Anda ikut dipertaruhkan.</p>
+    </div>
+    <div class="risks reveal">
+      <div class="risk"><div class="no">RISK / 01</div><h3>Realita vs Render</h3><p>Desain arsitek yang indah gagal dieksekusi karena kontraktor kurang detail membaca gambar kerja.</p></div>
+      <div class="risk"><div class="no">RISK / 02</div><h3>Material Downgrade</h3><p>Kualitas besi tulangan atau campuran beton dikurangi demi margin, berujung devaluasi aset Anda.</p></div>
+      <div class="risk"><div class="no">RISK / 03</div><h3>Beban Manajemen</h3><p>Waktu Anda terlalu berharga untuk mengurus tukang yang mangkir atau progres yang lambat.</p></div>
+    </div>
+    <div class="compare reveal">
+      <div class="crow hd"><div>✕ Pemborong biasa</div><div>✓ Standar Kalmer</div></div>
+      <div class="crow">
+        <div><span class="x">✕</span><div><h4>Harga “jebakan” per meter</h4><p>Penawaran global tanpa rincian, memicu biaya siluman saat pembangunan berjalan.</p></div></div>
+        <div><span class="v">✓</span><div><h4>RAB detail hingga satuan terkecil</h4><p>Volume, harga satuan, dan merek material tertulis jelas di kontrak.</p></div></div>
+      </div>
+      <div class="crow">
+        <div><span class="x">✕</span><div><h4>Visual hanya coretan manual</h4><p>Tanpa simulasi 3D, hasil akhir sering meleset dari ekspektasi.</p></div></div>
+        <div><span class="v">✓</span><div><h4>Visualisasi 3D akurat</h4><p>Anda melihat hasil akhir sebelum batu pertama diletakkan.</p></div></div>
+      </div>
+      <div class="crow">
+        <div><span class="x">✕</span><div><h4>Proyek “rahasia” &amp; tertutup</h4><p>Tidak berani mengizinkan kunjungan ke proyek yang sedang berjalan.</p></div></div>
+        <div><span class="v">✓</span><div><h4>Proyek terbuka untuk dikunjungi</h4><p>9 lokasi aktif di Jabodetabek, silakan lihat langsung kualitas kerja kami.</p></div></div>
+      </div>
+      <div class="crow">
+        <div><span class="x">✕</span><div><h4>Sistem “one-man show”</h4><p>Tanpa tim sipil dan arsitektur, pengawasan lemah dan asal-asalan.</p></div></div>
+        <div><span class="v">✓</span><div><h4>Site engineer + project manager</h4><p>Diawasi engineer, satu pintu komunikasi, laporan progres mingguan.</p></div></div>
+      </div>
+      <div class="crow">
+        <div><span class="x">✕</span><div><h4>Belum dipercaya klien komersial</h4><p>Tidak terbiasa dengan SOP teknis dan ketepatan waktu kelas korporasi.</p></div></div>
+        <div><span class="v">✓</span><div><h4>Standar korporasi</h4><p>Dipercaya Kapal Api Group dan brand komersial nasional.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="bg-ink" id="layanan">
+  <div class="wrap">
+    <div class="head split reveal">
+      <div>
+        <span class="sec-no"><b>03</b>Layanan &amp; kualitas</span>
+        <h2 class="h2">Visi arsitek, dibangun <em>presisi di lapangan.</em></h2>
+      </div>
+      <p class="lead">Setiap sudut hunian Anda dibangun dengan standar presisi tinggi, layaknya sebuah <em>masterpiece</em>.</p>
+    </div>
+    <div class="svc-media reveal">
+      <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-9.27.43-AM.jpeg" alt="Detail finishing interior Kalmer" loading="lazy">
+      <div class="exp">
+        <span class="k">EST. EXPERIENCE</span>
+        <div class="n">8+</div>
+        <p>Tahun membangun hunian privat dan ruang komersial di Jabodetabek.</p>
+      </div>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div><span class="no">SVC-01</span></div><h3>Presisi Arsitektural</h3><p>Nat keramik presisi, dinding siku, dan instalasi MEP (mekanikal, elektrikal, plumbing) yang rapi dan tersembunyi.</p></div>
+      <div class="svc reveal"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><span class="no">SVC-02</span></div><h3>Spesifikasi Material Jujur</h3><p>Yang tertulis di RAB adalah yang Anda dapatkan. Brand terpercaya seperti Toto, Sika, dan Holcim.</p></div>
+      <div class="svc reveal"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div><span class="no">SVC-03</span></div><h3>Dedicated Project Manager</h3><p>Komunikasi satu pintu dan laporan progres berkala tanpa perlu setiap hari datang ke lokasi.</p></div>
+      <div class="svc reveal"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></div><span class="no">SVC-04</span></div><h3>Estimasi Biaya Detail</h3><p>RAB terperinci hingga satuan terkecil. Tanpa biaya siluman, dengan gambaran <em>cashflow</em> yang akurat.</p></div>
+      <div class="svc reveal"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 18h20v3H2zM5 18v-5a7 7 0 0 1 14 0v5M12 6V3M9 9V6.5M15 9V6.5"/></svg></div><span class="no">SVC-05</span></div><h3>Site Engineer Berkompeten</h3><p>Bukan sekadar mandor. Diawasi engineer yang paham struktur beton bertulang dan utilitas modern.</p></div>
+      <div class="svc reveal"><div class="top"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.9 6.9L22 10l-5.5 4.7L18 22l-6-3.6L6 22l1.5-7.3L2 10l7.1-1.1z"/></svg></div><span class="no">SVC-06</span></div><h3>High-End Finishing</h3><p>Marmer, granit, <em>smart home system</em>, hingga <em>custom furniture</em> dikerjakan oleh tenaga spesialis.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="bg-paper grid-l" id="proses">
+  <div class="wrap">
+    <div class="head split reveal">
+      <div>
+        <span class="sec-no"><b>04</b>Alur kerja profesional</span>
+        <h2 class="h2">Sistematis, transparan, <em>terukur.</em></h2>
+      </div>
+      <p class="lead">Enam tahap baku yang kami jalankan di setiap proyek, dari konsultasi pertama hingga serah terima kunci.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="num">01</div><h3>Discovery Call</h3><p>Memahami visi, kebutuhan ruang, dan gaya arsitektur Anda.</p></div>
+      <div class="step"><div class="num">02</div><h3>Site Analysis</h3><p>Survey topografi dan analisa lingkungan oleh tim teknis.</p></div>
+      <div class="step"><div class="num">03</div><h3>Design &amp; Budgeting</h3><p>Finalisasi desain dan penyusunan RAB komprehensif.</p></div>
+      <div class="step"><div class="num">04</div><h3>Legal &amp; Contract</h3><p>Kontrak kerja yang jelas demi perlindungan kedua pihak.</p></div>
+      <div class="step"><div class="num">05</div><h3>Construction</h3><p>Eksekusi dengan laporan progres mingguan (Kurva S).</p></div>
+      <div class="step"><div class="num">06</div><h3>Handover &amp; Warranty</h3><p>Serah terima, <em>as-built drawing</em>, dan aktivasi garansi.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="bg-ink grid-d" id="portofolio">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="sec-no"><b>05</b>Portofolio pilihan</span>
+      <h2 class="h2">Dedikasi pada kualitas &amp; <em>detail di setiap proyek.</em></h2>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-tab="p1">Tebet</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="p2">Untar</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="p3">Setu</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="p4">Depok</button>
+    </div>
+
+    <div class="panel" id="p1">
+      <div class="proj">
+        <div class="proj-info">
+          <span class="chip">Luxury Commercial</span>
+          <h3>Facade &amp; Interior Premium</h3>
+          <div class="loc">Tebet Timur · Jakarta Selatan</div>
+          <dl class="spec"><div><dt>Lingkup</dt><dd>Facade &amp; interior total</dd></div><div><dt>Pekerjaan</dt><dd>Custom furniture, ceiling</dd></div><div><dt>Kategori</dt><dd>Komersial</dd></div></dl>
+        </div>
+        <div class="gal" data-group="tebet">
+          <img class="wide" src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-9.27.43-AM-1.jpeg" alt="Tebet 1" loading="lazy">
+          <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-9.27.30-AM-1.jpeg" alt="Tebet 2" loading="lazy">
+          <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-9.27.43-AM.jpeg" alt="Tebet 3" loading="lazy">
+          <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-9.27.30-AM-3.jpeg" alt="Tebet 4" loading="lazy">
+          <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-9.31.59-AM.jpeg" alt="Tebet 5" loading="lazy">
+          <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-9.31.46-AM.jpeg" alt="Tebet 6" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p2" hidden>
+      <div class="proj">
+        <div class="proj-info">
+          <span class="chip b">Educational Facility</span>
+          <h3>Modern Workspace &amp; Public Area</h3>
+          <div class="loc">Universitas Tarumanagara · Jakarta Barat</div>
+          <dl class="spec"><div><dt>Lingkup</dt><dd>Area publik &amp; kios F&amp;B</dd></div><div><dt>Pekerjaan</dt><dd>Ceiling kayu, lighting</dd></div><div><dt>Kategori</dt><dd>Pendidikan</dd></div></dl>
+        </div>
+        <div class="gal two" data-group="untar">
+          <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-10.42.37-AM-1.jpeg" alt="Interior Untar 1" loading="lazy">
+          <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-10.42.37-AM.jpeg" alt="Interior Untar 2" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p3" hidden>
+      <div class="proj">
+        <div class="proj-info">
+          <span class="chip">Commercial Revamp</span>
+          <h3>Restorasi Bangunan Komersial</h3>
+          <div class="loc">Setu · Bekasi</div>
+          <dl class="spec"><div><dt>Lingkup</dt><dd>Revitalisasi facade</dd></div><div><dt>Pekerjaan</dt><dd>Premium finishing</dd></div><div><dt>Kategori</dt><dd>Komersial</dd></div></dl>
+        </div>
+        <div>
+          <div class="ba">
+            <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-11.31.43-AM.jpeg" alt="Kondisi sebelum" loading="lazy">
+            <img class="after" src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-05-at-11.32.43-AM.jpeg" alt="Hasil setelah renovasi" loading="lazy">
+            <span class="lbl l">Sebelum</span><span class="lbl r">Sesudah</span>
+            <div class="bar"></div>
+            <input type="range" min="0" max="100" value="50" aria-label="Bandingkan sebelum dan sesudah">
+          </div>
+          <p class="ba-hint">← Geser untuk membandingkan →</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p4" hidden>
+      <div class="proj">
+        <div class="proj-info">
+          <span class="chip k">In Development</span>
+          <h3>Modern Architecture Design</h3>
+          <div class="loc">Depok · Jawa Barat</div>
+          <dl class="spec"><div><dt>Tahap</dt><dd>Desain &amp; perencanaan</dd></div><div><dt>Output</dt><dd>Visualisasi 3D</dd></div><div><dt>Kategori</dt><dd>Residensial</dd></div></dl>
+        </div>
+        <div>
+          <div class="ba">
+            <img src="https://kalmer.id/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-04-at-1.00.24-PM.jpeg" alt="Lokasi eksisting" loading="lazy">
+            <img class="after" src="https://kalmer.id/wp-content/uploads/2026/01/Gemini_Generated_Image_xynmq0xynmq0xynm.png" alt="Render 3D" loading="lazy">
+            <span class="lbl l">Lokasi saat ini</span><span class="lbl r">Render 3D</span>
+            <div class="bar"></div>
+            <input type="range" min="0" max="100" value="50" aria-label="Bandingkan lokasi dan render">
+          </div>
+          <p class="ba-hint">← Geser untuk membandingkan →</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section class="bg-bp grid-bp" id="testimoni">
+  <div class="wrap">
+    <div class="head split reveal">
+      <div>
+        <span class="sec-no"><b>06</b>Real client stories</span>
+        <h2 class="h2">Apa kata <em>mereka?</em></h2>
+      </div>
+      <p class="lead">Kepuasan klien dan kualitas hasil akhir adalah bukti komitmen kami, langsung dari lapangan.</p>
+    </div>
+    <div class="vids">
+      <div><div class="vid" data-yt="W9-mN76cCCs"></div><div class="vid-cap"><div class="stars">★★★★★</div><h4>Owner Testimonial</h4><p>Bekerja sama mewujudkan tempat usaha.</p></div></div>
+      <div><div class="vid" data-yt="F81Yq95_Rjg"></div><div class="vid-cap"><div class="stars">★★★★★</div><h4>Review Hasil Renovasi</h4><p>Kualitas pengerjaan dan detail finishing.</p></div></div>
+      <div><div class="vid" data-yt="wooZCkQZPds"></div><div class="vid-cap"><div class="stars">★★★★★</div><h4>Red Chicken Burger</h4><p>Ruko menjadi outlet F&amp;B modern.</p></div></div>
+      <div><div class="vid" data-yt="awPnIb0Y6NQ"></div><div class="vid-cap"><div class="stars">★★★★★</div><h4>Pengalaman Klien</h4><p>Ketepatan waktu dan komunikasi tim.</p></div></div>
+    </div>
+
+    <div class="reveal" style="margin:88px 0 32px">
+      <span class="sec-no"><b>06B</b>Shorts &amp; Reels</span>
+      <h2 class="h2" style="font-size:clamp(28px,3.4vw,40px)">Liputan proyek dalam video singkat.</h2>
+    </div>
+    <div class="shorts">
+      <div class="vid short" data-yt="q46fspEHF0U"></div>
+      <div class="vid short" data-yt="HKiPiOvHwJQ"></div>
+      <div class="vid short" data-yt="aC108JFanEM"></div>
+      <div class="vid short" data-yt="JgUexXg67fg"></div>
+      <div class="vid short" data-yt="M4kwhmb1HPs"></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section class="bg-paper" id="galeri">
+  <div class="wrap">
+    <div class="head split reveal">
+      <div>
+        <span class="sec-no"><b>07</b>Proven track record</span>
+        <h2 class="h2">Serah terima &amp; <em>galeri proyek.</em></h2>
+      </div>
+      <div class="tabs" style="margin:0;justify-self:end" role="tablist">
+        <button class="tab" aria-selected="true" data-filter="all">Semua</button>
+        <button class="tab" aria-selected="false" data-filter="st">Serah Terima</button>
+        <button class="tab" aria-selected="false" data-filter="gl">Hasil Proyek</button>
+      </div>
+    </div>
+    <div class="masonry" data-group="galeri">
+      <img data-cat="st" src="https://kalmer.id/wp-content/uploads/2025/09/20230731_175628-scaled-1.jpg" alt="Serah terima" loading="lazy">
+      <img data-cat="gl" src="https://kalmer.id/wp-content/uploads/2025/09/0d715551c63adcd5428fcf471787375b-scaled-1.jpg" alt="Proyek" loading="lazy">
+      <img data-cat="st" src="https://kalmer.id/wp-content/uploads/2025/09/20230731_175406-scaled-1.jpg" alt="Serah terima" loading="lazy">
+      <img data-cat="gl" src="https://kalmer.id/wp-content/uploads/2025/09/e196b4837b5c5a8748849b33009bc030-scaled-1.jpg" alt="Proyek" loading="lazy">
+      <img data-cat="gl" src="https://kalmer.id/wp-content/uploads/2025/09/WhatsApp-Image-2025-08-12-at-13.30.39_335cd501.jpg" alt="Proyek" loading="lazy">
+      <img data-cat="st" src="https://kalmer.id/wp-content/uploads/2025/09/20230503_120436-scaled-1.jpg" alt="Serah terima" loading="lazy">
+      <img data-cat="gl" src="https://kalmer.id/wp-content/uploads/2025/09/22ad14211583fd1fada312ce626beb3e-scaled-1.jpg" alt="Proyek" loading="lazy">
+      <img data-cat="gl" src="https://kalmer.id/wp-content/uploads/2025/09/3bbb060527dd265e19ebb77beaf827e9-scaled-1.jpg" alt="Proyek" loading="lazy">
+      <img data-cat="st" src="https://kalmer.id/wp-content/uploads/2025/09/20221213_153024-scaled-1.jpg" alt="Serah terima" loading="lazy">
+      <img data-cat="gl" src="https://kalmer.id/wp-content/uploads/2025/09/d1b0cb3be53d321275560bdc16b92a55-scaled-1.jpg" alt="Proyek" loading="lazy">
+      <img data-cat="gl" src="https://kalmer.id/wp-content/uploads/2025/09/011a994f8d87c010972b3cfecddb0c19-scaled-1.jpg" alt="Proyek" loading="lazy">
+      <img data-cat="st" src="https://kalmer.id/wp-content/uploads/2025/09/20221126_135708-scaled-1.jpg" alt="Serah terima" loading="lazy">
+      <img data-cat="gl" src="https://kalmer.id/wp-content/uploads/2025/09/ed4e898d0428f01c033d72bdb94bb47d.jpeg" alt="Proyek" loading="lazy">
+      <img data-cat="gl" src="https://kalmer.id/wp-content/uploads/2025/09/d572815c6fc5c270b6f204634e43e924.jpg" alt="Proyek" loading="lazy">
+      <img data-cat="st" src="https://kalmer.id/wp-content/uploads/2025/09/STK-Bekasi-1-scaled-1.jpg" alt="Serah terima Bekasi" loading="lazy">
+      <img data-cat="gl" src="https://kalmer.id/wp-content/uploads/2025/09/ba625f81836a4d87662cb38b66841dcc-scaled-1.jpeg" alt="Proyek" loading="lazy">
+      <img data-cat="gl" src="https://kalmer.id/wp-content/uploads/2025/09/a2b423e1dd9b3d4ef026067d14cd2493.jpeg" alt="Proyek" loading="lazy">
+      <img data-cat="gl" src="https://kalmer.id/wp-content/uploads/2025/09/338252d86a61783f52b6ae4c065bd8a4-scaled-1.jpeg" alt="Proyek" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ONGOING -->
+<section class="bg-ink grid-d">
+  <div class="wrap">
+    <div class="head split reveal">
+      <div>
+        <span class="sec-no"><b>08</b>Live update</span>
+        <h2 class="h2">Sedang <em>kami kerjakan.</em></h2>
+      </div>
+      <p class="lead">Dedikasi kami di berbagai titik Jabodetabek. Ingin melihat langsung? Jadwalkan kunjungan proyek.</p>
+    </div>
+    <div class="board reveal">
+      <div class="brow hd"><span>No</span><span>Lokasi</span><span>Lingkup</span><span>Kategori</span><span>Status</span></div>
+      <div class="brow"><span class="no">01</span><h4>Bekasi Jaya Indah</h4><span class="d">Private House Renovation</span><span><span class="chip b">Residential</span></span><span class="status"><span class="pulse"></span>ON PROGRESS</span></div>
+      <div class="brow"><span class="no">02</span><h4>Taman Parahyangan</h4><span class="d">Lippo Village · Luxury Renovation</span><span><span class="chip b">Residential</span></span><span class="status"><span class="pulse"></span>ON PROGRESS</span></div>
+      <div class="brow"><span class="no">03</span><h4>Taman Royale Poris</h4><span class="d">Modern Tropical Renovation</span><span><span class="chip b">Residential</span></span><span class="status"><span class="pulse"></span>ON PROGRESS</span></div>
+      <div class="brow"><span class="no">04</span><h4>Kebayoran Lama Raya</h4><span class="d">Boutique Commercial Area</span><span><span class="chip">Commercial</span></span><span class="status"><span class="pulse"></span>ON PROGRESS</span></div>
+      <div class="brow"><span class="no">05</span><h4>Meruya Ilir Residence</h4><span class="d">High-End Total Renovation</span><span><span class="chip k">Luxury</span></span><span class="status"><span class="pulse"></span>ON PROGRESS</span></div>
+      <div class="brow"><span class="no">06</span><h4>Kota Wisata Estate</h4><span class="d">Modern Classic Renovation</span><span><span class="chip k">Luxury</span></span><span class="status"><span class="pulse"></span>ON PROGRESS</span></div>
+      <div class="brow"><span class="no">07</span><h4>Summarecon Morizen</h4><span class="d">Japanese Luxury Concept</span><span><span class="chip k">Luxury</span></span><span class="status"><span class="pulse"></span>ON PROGRESS</span></div>
+      <div class="brow"><span class="no">08</span><h4>F&amp;B Unit Depok</h4><span class="d">Premium Outlet Construction</span><span><span class="chip">Commercial</span></span><span class="status"><span class="pulse"></span>ON PROGRESS</span></div>
+      <div class="brow"><span class="no">09</span><h4>Kost Pondok China</h4><span class="d">Kos Mahasiswa Premium</span><span><span class="chip g">Investment</span></span><span class="status"><span class="pulse"></span>ON PROGRESS</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec" id="konsultasi">
+  <div class="wrap">
+    <div class="cta">
+      <div class="reveal">
+        <span class="sec-no"><b>09</b>Prioritas kualitas</span>
+        <h2 style="margin-top:18px">Aset masa depan Anda, <em>dimulai dari sini.</em></h2>
+        <p class="note">Untuk menjaga standar pengawasan premium, kami membatasi jumlah proyek aktif setiap tahunnya. Hubungi kami untuk ketersediaan jadwal.</p>
+      </div>
+      <div class="cta-box marks reveal">
+        <h3>Jadwalkan Konsultasi Eksklusif</h3>
+        <p>Langsung dengan Principal Architect &amp; Engineer Kalmer.</p>
+        <a class="btn" href="https://wa.me/6281250505181?text=Halo%20Tim%20Kalmer,%20saya%20ingin%20mendiskusikan%20rencana%20pembangunan%20properti%20saya." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Hubungi WhatsApp Kami</a>
+        <div class="bonus">
+          <b>Bonus konsultasi gratis</b>
+          <ul><li>Analisa layout &amp; zonasi</li><li>Rekomendasi material premium</li><li>Estimasi ROI properti</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-paper grid-l" id="faq">
+  <div class="wrap faq">
+    <div class="reveal">
+      <span class="sec-no"><b>10</b>FAQ</span>
+      <h2 class="h2">Pertanyaan yang <em>sering diajukan.</em></h2>
+      <p class="lead">Jawaban transparan untuk keraguan Anda sebelum memulai proyek impian.</p>
+      <a class="btn btn-primary" style="margin-top:32px" href="https://wa.me/6281250505181" target="_blank" rel="noopener">Tanya via WhatsApp →</a>
+    </div>
+    <div class="faq-list reveal">
+      <details open><summary><i>Q.01</i>Berapa biaya jasa konstruksi di Kalmer?</summary><p>Kami tidak memakai sistem “harga borongan per meter” yang sering menjebak dengan spesifikasi tidak jelas. Biaya dihitung dari RAB detail yang mencantumkan volume, harga satuan, dan merek material secara transparan, tanpa biaya siluman di tengah jalan.</p></details>
+      <details><summary><i>Q.02</i>Apakah bisa memakai desain dari arsitek saya sendiri?</summary><p>Sangat bisa. Tim teknis kami menerjemahkan gambar desain (DED) menjadi realita konstruksi dengan presisi tinggi, dan melakukan <em>value engineering</em> bila perlu untuk menyesuaikan budget tanpa mengurangi estetika utama.</p></details>
+      <details><summary><i>Q.03</i>Bagaimana sistem pembayarannya? Aman?</summary><p>Pembayaran bertahap (termin) berdasarkan progres fisik di lapangan sesuai kontrak (SPK). Anda hanya membayar untuk yang sudah terbangun. DP yang wajar hanya untuk mobilisasi awal.</p></details>
+      <details><summary><i>Q.04</i>Apakah ada garansi setelah bangunan selesai?</summary><p>Ada masa retensi (pemeliharaan) 3 bulan setelah serah terima untuk perbaikan minor, ditambah garansi struktur beton dan kebocoran atap sesuai klausul kontrak resmi.</p></details>
+      <details><summary><i>Q.05</i>Berapa lama proses pembangunannya?</summary><p>Tergantung luas dan kerumitan desain. Sebagai gambaran, rumah 2 lantai tipe 150–200 m² biasanya 6–8 bulan. Timeline (Kurva S) dicantumkan mengikat di kontrak.</p></details>
+      <details><summary><i>Q.06</i>Saya sibuk, bagaimana memantau proyek?</summary><p>Dedicated Project Manager mengirim laporan progres mingguan (foto &amp; video) via WhatsApp Group, sehingga Anda tetap bisa fokus pada pekerjaan.</p></details>
+      <details><summary><i>Q.07</i>Area mana saja yang dilayani?</summary><p>Jabodetabek (Jakarta, Bogor, Depok, Tangerang, Bekasi) untuk memastikan kontrol kualitas dan pengawasan maksimal dari tim pusat.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink grid-d">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="logo logo-box"><span class="crop"><img src="https://kalmer.id/wp-content/uploads/2025/09/Logo-Sosmed-01-1.png" alt="Kalmer"></span></a>
+        <p style="margin-top:22px;max-width:380px">Mitra konstruksi premium di Jabodetabek. Membangun hunian mewah dan properti komersial dengan standar kualitas tanpa kompromi.</p>
+      </div>
+      <div>
+        <h5>Hubungi Kami</h5>
+        <ul>
+          <li>Jl. Salak 1 No.66 Blok A5, Bekasi Utara, Jawa Barat 17121</li>
+          <li><a href="https://wa.me/6281250505181" target="_blank" rel="noopener">0812-5050-5181</a></li>
+          <li><a href="mailto:admin@kalmer.id">admin@kalmer.id</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Ikuti Kami</h5>
+        <ul>
+          <li><a href="https://tiktok.com/@kalmer.id" target="_blank" rel="noopener">TikTok · @kalmer.id</a></li>
+          <li><a href="https://www.instagram.com/kalmermultiteknik/" target="_blank" rel="noopener">Instagram · @kalmermultiteknik</a></li>
+          <li><a href="https://www.youtube.com/@kalmerofficial" target="_blank" rel="noopener">YouTube · @kalmerofficial</a></li>
+          <li><a href="https://www.facebook.com/kalmer.multitek" target="_blank" rel="noopener">Facebook · Kalmer Multi Teknik</a></li>
+          <li><a href="https://shopee.co.id/kalmer" target="_blank" rel="noopener">Shopee · Kalmer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy"><span>© 2026 Kalmer Multi Teknik. All rights reserved.</span><span>GENERAL CONTRACTOR · JABODETABEK</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/6281250505181?text=Halo%20Kalmer,%20saya%20tertarik%20konsultasi%20bangun/renovasi." target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.9 1 3.9.8a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galeri foto">
+  <button class="c" aria-label="Tutup">✕</button>
+  <button class="p" aria-label="Sebelumnya">‹</button>
+  <img alt="">
+  <button class="n" aria-label="Berikutnya">›</button>
+  <div class="cnt"></div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var root=document.querySelector('.kx');
+
+  // nav: menu mobile
+  var nav=document.getElementById('nav');
+  document.getElementById('burger').onclick=function(){nav.classList.toggle('open')};
+  document.querySelectorAll('#navLinks a').forEach(function(a){a.onclick=function(){nav.classList.remove('open')}});
+
+  // hero slider full screen: autoplay, prev/next, swipe, pause saat kursor di kontrol/caption
+  (function(){
+    var hs=document.getElementById('top'),slides=[].slice.call(hs.querySelectorAll('.hs-slide')),
+        dots=hs.querySelector('.hs-dots'),bar=hs.querySelector('.hs-progress i'),
+        curEl=hs.querySelector('.hs-count .cur'),cur=0,timer,DUR=6000,
+        still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+    function pad(n){return (n<10?'0':'')+n}
+    hs.style.setProperty('--dur',DUR+'ms');
+    hs.querySelector('.hs-count .tot').textContent=pad(slides.length);
+    slides.forEach(function(s,i){
+      var d=document.createElement('button');d.setAttribute('aria-label','Slide '+(i+1));
+      d.onclick=function(){go(i)};dots.appendChild(d);
+    });
+    // judul proyek aktif di strip bawah; klik = buka tab portofolio terkait
+    var now=hs.querySelector('.hs-now');
+    now.onclick=function(){
+      var t=document.querySelector('.kx [data-tab="'+slides[cur].dataset.goto+'"]');
+      if(t)t.click();
+    };
+    function setNow(){
+      now.classList.add('fade');
+      setTimeout(function(){
+        now.querySelector('.t').textContent=slides[cur].querySelector('.hs-cap strong').textContent;
+        now.querySelector('.l').textContent=slides[cur].querySelector('.hs-cap .loc').textContent;
+        now.classList.remove('fade');
+      },250);
+    }
+    function go(i){
+      slides[cur].classList.remove('active');
+      cur=(i+slides.length)%slides.length;
+      slides[cur].classList.add('active');
+      curEl.textContent=pad(cur+1);
+      setNow();
+      [].forEach.call(dots.children,function(d,j){d.setAttribute('aria-current',j===cur)});
+      restart();
+    }
+    function restart(){
+      clearTimeout(timer);bar.classList.remove('run');void bar.offsetWidth;
+      if(still)return;
+      bar.classList.add('run');timer=setTimeout(function(){go(cur+1)},DUR);
+    }
+    function pause(){clearTimeout(timer);bar.classList.remove('run')}
+    hs.querySelector('.hs-prev').onclick=function(e){e.stopPropagation();go(cur-1)};
+    hs.querySelector('.hs-next').onclick=function(e){e.stopPropagation();go(cur+1)};
+    hs.querySelectorAll('.hs-ctrl').forEach(function(el){
+      el.addEventListener('mouseenter',pause);
+      el.addEventListener('mouseleave',restart);
+    });
+    var x0=null;
+    hs.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;pause()},{passive:true});
+    hs.addEventListener('touchend',function(e){
+      if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;
+      Math.abs(dx)>40?go(cur+(dx<0?1:-1)):restart();
+    });
+    document.addEventListener('visibilitychange',function(){document.hidden?pause():restart()});
+    go(0);
+  })();
+
+  // logo marquee: duplikat isi supaya loop mulus
+  var tr=document.getElementById('track'); tr.innerHTML+=tr.innerHTML;
+
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  root.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+  // tab portofolio
+  root.querySelectorAll('[data-tab]').forEach(function(b){
+    b.onclick=function(){
+      root.querySelectorAll('[data-tab]').forEach(function(x){x.setAttribute('aria-selected',x===b);document.getElementById(x.dataset.tab).hidden=x!==b});
+    };
+  });
+
+  // filter galeri
+  root.querySelectorAll('[data-filter]').forEach(function(b){
+    b.onclick=function(){
+      root.querySelectorAll('[data-filter]').forEach(function(x){x.setAttribute('aria-selected',x===b)});
+      root.querySelectorAll('.masonry img').forEach(function(img){img.style.display=(b.dataset.filter==='all'||img.dataset.cat===b.dataset.filter)?'':'none'});
+    };
+  });
+
+  // before/after slider
+  root.querySelectorAll('.ba input').forEach(function(r){
+    r.oninput=function(){r.parentNode.style.setProperty('--pos',r.value+'%')};
+  });
+
+  // video YouTube: thumbnail dulu, iframe baru dimuat saat diklik
+  root.querySelectorAll('.vid[data-yt]').forEach(function(v){
+    var id=v.dataset.yt;
+    v.innerHTML='<img src="https://i.ytimg.com/vi/'+id+'/hqdefault.jpg" alt="Video Kalmer" loading="lazy" onerror="this.src=\'https://i.ytimg.com/vi/'+id+'/mqdefault.jpg\';this.onerror=null"><div class="play"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span></div>';
+    v.onclick=function(){
+      v.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Video Kalmer"></iframe>';
+      v.onclick=null;
+    };
+  });
+
+  // lightbox
+  var lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),cnt=lb.querySelector('.cnt'),list=[],idx=0;
+  function show(){lbImg.src=list[idx].src;cnt.textContent=(idx+1)+' / '+list.length}
+  root.querySelectorAll('[data-group] img').forEach(function(img){
+    img.onclick=function(){
+      list=[].slice.call(img.closest('[data-group]').querySelectorAll('img')).filter(function(i){return i.style.display!=='none'});
+      idx=list.indexOf(img);show();lb.classList.add('open');
+    };
+  });
+  function close(){lb.classList.remove('open')}
+  lb.querySelector('.c').onclick=close;
+  lb.querySelector('.p').onclick=function(e){e.stopPropagation();idx=(idx-1+list.length)%list.length;show()};
+  lb.querySelector('.n').onclick=function(e){e.stopPropagation();idx=(idx+1)%list.length;show()};
+  lb.onclick=function(e){if(e.target===lb)close()};
+  addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowLeft')lb.querySelector('.p').click();
+    if(e.key==='ArrowRight')lb.querySelector('.n').click();
+  });
+})();
+</script>
+</body>
+</html>

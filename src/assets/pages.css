@@ -1,0 +1,145 @@
+/* =========================================================
+   HALAMAN DALAM (layanan, area, portofolio, blog)
+   Digabung ke site.css saat build.
+   ========================================================= */
+.kx .page-hero{position:relative;padding:120px 0 88px;color:#f3f1ec;background:var(--ink);overflow:hidden}
+.kx .page-hero .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32}
+.kx .page-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,15,18,.92) 0,rgba(11,15,18,.7) 55%,rgba(11,15,18,.45))}
+.kx .page-hero .wrap{position:relative;z-index:2}
+.kx .page-hero h1{font-family:var(--serif);font-size:clamp(40px,5.4vw,76px);line-height:1.02;font-weight:500;letter-spacing:-.01em;margin:22px 0 24px;max-width:900px}
+.kx .page-hero h1 em{color:#e9c9a0}
+.kx .page-hero .lead{color:#c9ced3;max-width:640px;margin:0}
+.kx .page-hero .hero-cta{margin-top:36px}
+.kx .page-hero .btn-ghost{color:#fff}
+.kx .crumbs{display:flex;flex-wrap:wrap;gap:10px;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--mut-d);list-style:none;margin:0;padding:0}
+.kx .crumbs li+li::before{content:"/";margin-right:10px;opacity:.5}
+.kx .crumbs a:hover{color:#fff}
+.kx .crumbs [aria-current]{color:#e9c9a0}
+.kx .meta-row{display:flex;flex-wrap:wrap;gap:14px 32px;margin-top:28px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut-d)}
+.kx .meta-row b{color:#f3f1ec;font-weight:600}
+
+/* teks artikel */
+.kx .prose{font-size:17px;line-height:1.85;color:#2b2e31;max-width:720px}
+.kx .prose > * + *{margin-top:1.15em}
+.kx .prose h2{font-family:var(--serif);font-size:36px;line-height:1.15;font-weight:600;color:var(--ink);margin-top:1.9em}
+.kx .prose h3{font-family:var(--serif);font-size:25px;line-height:1.25;font-weight:600;color:var(--ink);margin-top:1.6em}
+.kx .prose ul,.kx .prose ol{padding-left:1.3em}
+.kx .prose li + li{margin-top:.5em}
+.kx .prose li::marker{color:var(--red)}
+.kx .prose a{color:var(--red-d);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.kx .prose a:hover{color:var(--ink)}
+.kx .prose strong{font-weight:700;color:var(--ink)}
+.kx .bg-ink .prose{color:#c9ced3}
+.kx .bg-ink .prose h2,.kx .bg-ink .prose h3,.kx .bg-ink .prose strong{color:#f3f1ec}
+.kx .bg-ink .prose a{color:#e9c9a0}
+
+.kx .with-aside{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:88px;align-items:start}
+.kx .aside{position:sticky;top:120px;display:grid;gap:28px}
+.kx .aside-card{background:var(--ink);color:#f3f1ec;padding:34px 30px}
+.kx .aside-card h3{font-family:var(--serif);font-size:28px;font-weight:500;line-height:1.15}
+.kx .aside-card p{font-size:14.5px;color:var(--mut-d);margin:10px 0 24px;font-weight:300}
+.kx .aside-card .btn{width:100%;justify-content:center}
+.kx .aside-links h4{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;font-weight:700}
+.kx .aside-links a{display:block;padding:12px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:19px;line-height:1.3;transition:color .3s}
+.kx .aside-links a:hover{color:var(--red)}
+@media (max-width:1000px){.kx .with-aside{grid-template-columns:1fr;gap:56px}.kx .aside{position:static}}
+
+/* daftar fitur / lingkup */
+.kx .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:0 56px}
+.kx .feat > div{padding:30px 0 36px;border-top:1px solid var(--line)}
+.kx .bg-ink .feat > div{border-color:var(--edge)}
+.kx .feat h3{font-family:var(--serif);font-size:25px;font-weight:600;line-height:1.2;margin-bottom:8px}
+.kx .feat p{font-size:15px;color:var(--muted);font-weight:300}
+.kx .bg-ink .feat p{color:var(--mut-d)}
+.kx .feat .k{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--red);margin-bottom:10px;display:block}
+.kx .bg-ink .feat .k{color:#e9c9a0}
+@media (max-width:900px){.kx .feat{grid-template-columns:1fr}}
+
+/* kartu (proyek, artikel) */
+.kx .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 32px}
+.kx .cards.two{grid-template-columns:repeat(2,1fr)}
+.kx .card{display:flex;flex-direction:column;gap:14px;color:inherit}
+.kx .card .ph{overflow:hidden;aspect-ratio:4/3;background:var(--stone)}
+.kx .card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.kx .card:hover .ph img{transform:scale(1.05)}
+.kx .card .chip{align-self:flex-start;color:var(--red)}
+.kx .bg-ink .card .chip{color:#e9c9a0}
+.kx .card h3{font-family:var(--serif);font-size:27px;font-weight:500;line-height:1.15}
+.kx .card p{font-size:15px;color:var(--muted);font-weight:300}
+.kx .bg-ink .card p{color:var(--mut-d)}
+.kx .card .more{margin-top:auto;font-size:10.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ink)}
+.kx .bg-ink .card .more{color:#e9c9a0}
+.kx .card .more::after{content:" →"}
+.kx .card .loc{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.kx .bg-ink .card .loc{color:var(--mut-d)}
+@media (max-width:1000px){.kx .cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.kx .cards,.kx .cards.two{grid-template-columns:1fr}}
+
+/* kartu layanan di homepage */
+.kx .svc-cards{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.kx .svc-card{padding:40px 32px 36px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:14px;transition:background .4s,color .4s}
+.kx .svc-card:hover{background:var(--ink);color:#f3f1ec}
+.kx .svc-card .ic{color:var(--red)}
+.kx .svc-card:hover .ic{color:#e9c9a0}
+.kx .svc-card .ic svg{width:30px;height:30px}
+.kx .svc-card h3{font-family:var(--serif);font-size:28px;font-weight:500;line-height:1.1;margin-top:18px}
+.kx .svc-card p{font-size:14.5px;color:var(--muted);font-weight:300}
+.kx .svc-card:hover p{color:var(--mut-d)}
+.kx .svc-card .more{margin-top:auto;padding-top:12px;font-size:10.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
+.kx .svc-card .more::after{content:" →"}
+@media (max-width:1000px){.kx .svc-cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.kx .svc-cards{grid-template-columns:1fr}}
+
+/* tag area */
+.kx .tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
+.kx .tags li,.kx .tags a{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:9px 16px;border:1px solid var(--line);color:var(--muted);transition:.3s}
+.kx .tags li a{border:0;padding:0}
+.kx .tags a:hover{border-color:var(--ink);color:var(--ink)}
+.kx .bg-ink .tags li,.kx .bg-ink .tags > a{border-color:var(--edge);color:var(--mut-d)}
+.kx .bg-ink .tags a:hover{border-color:#e9c9a0;color:#e9c9a0}
+
+/* studi kasus */
+.kx .section-sm{padding:96px 0}
+.kx .split2{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+@media (max-width:900px){.kx .split2{grid-template-columns:1fr;gap:48px}.kx .section-sm{padding:72px 0}}
+.kx .video-box{position:relative;aspect-ratio:16/9}
+.kx .mt-l{margin-top:64px}
+.kx .note-sm{font-size:13px;color:var(--muted);margin-top:14px}
+.kx .bg-ink .spec{border-color:var(--edge)}
+.kx .bg-paper .spec{border-color:var(--line)}
+.kx .bg-paper .spec div{border-color:var(--line)}
+.kx .bg-paper .spec dt{color:var(--muted)}
+
+/* tautan aktif di menu */
+.kx .nav-links a[aria-current="page"]{color:var(--ink)}
+.kx .nav-links a[aria-current="page"]::after{left:0;right:0}
+
+/* footer 4 kolom */
+.kx .foot{grid-template-columns:1.4fr 1fr 1fr 1fr}
+@media (max-width:1000px){.kx .foot{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.kx .foot{grid-template-columns:1fr}}
+
+/* tombol WA muncul setelah melewati hero */
+.kx .wa{opacity:0;pointer-events:none;transform:translateY(16px);transition:opacity .4s,transform .4s}
+.kx .wa.show{opacity:1;pointer-events:auto;transform:none}
+
+/* halaman hub (link di bio Instagram) */
+.kx .hub{min-height:100vh;display:flex;align-items:center;padding:64px 0}
+.kx .hub .wrap{max-width:520px;text-align:center}
+.kx .hub .logo-box{display:inline-block;background:#fff;padding:14px 18px;margin-bottom:28px}
+.kx .hub .logo-box img{height:64px;width:auto}
+.kx .hub h1{font-family:var(--serif);font-size:34px;font-weight:500;line-height:1.2}
+.kx .hub > .wrap > p{color:var(--mut-d);margin:10px 0 32px;font-weight:300}
+.kx .hub-links{display:grid;gap:12px}
+.kx .hub-links a{display:block;padding:18px 22px;border:1px solid var(--edge);text-align:left;transition:.3s}
+.kx .hub-links a:hover{border-color:#e9c9a0;background:rgba(255,255,255,.03)}
+.kx .hub-links b{display:block;font-family:var(--serif);font-size:22px;font-weight:500}
+.kx .hub-links span{font-size:13px;color:var(--mut-d)}
+.kx .hub-links a.primary{background:var(--red);border-color:var(--red)}
+.kx .hub-links a.primary span{color:#ffe1e1}
+
+/* aksesibilitas */
+.kx a:focus-visible,.kx button:focus-visible,.kx summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.kx .skip{position:absolute;left:-9999px;top:0;background:#fff;color:var(--ink);padding:12px 18px;z-index:100}
+.kx .skip:focus{left:12px;top:12px}
+.kx .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
